@@ -1,0 +1,52 @@
+ :root{
+	
+    --gray:#5A5A5A;
+	--yellow:#F1C40F;
+	--orange:#D68910;
+	--light-gray:#eee;
+	--white:#FFFFFF;
+	--footer:#EEEEEE; 
+	--text-shadow:.2em  .2em .3em silver;
+	--card:#EEEEEE ;
+	--box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+	
+}
+ .menu .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap:5rem;
+ }
+
+ .menu .box-container .box{
+   background: var(--white);
+   border:.2rem solid rgba(0,0,0,.2);
+   border-radius: .5rem;
+ }
+
+ .menu .box-container .box .image{
+  height: 25rem;
+  width: 100%;
+  padding:1.5rem;
+ }
+
+ .menu .box-container .box .image img{
+   height: 100%;
+   width: 100%;
+   border-radius: .5rem;
+ }
+
+ .menu .box-container .box .content{
+   padding:1rem;  
+   padding-top: 0;
+ }
+
+ .menu .box-container .box .content h3{
+  color:var(--orange);
+  font-size: 2.5rem;
+ }
+
+ .menu .box-container .box .content p{
+  color:var(--gray);
+  font-size: 1.6rem;
+  padding:.5rem 0;
+ }

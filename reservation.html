@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>E-foods</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reservation.css">
+	
+</head>
+
+<body> 
+<header>
+    <a href="index.html" class="logo"><i class="fas fa-hamburger"></i>e-foods</a>
+
+    <nav class="navbar">
+        <a href="index.html" accesskey="h">HOME</a>
+        <a href="staff.html" accesskey="s">STAFF</a>
+		<a class="active" href="reservation.html" accesskey="r">RESERVATION</a>
+		<a href="order.html" accesskey="o">ORDER</a>
+		<a href="menu.html" accesskey="m">MENU</a>
+    </nav>
+	<i class ="fas fa-bars" id="menu-bars"></i>
+</header>
+
+<ul class="breadcrumb">
+	<li><a href="index.html" accesskey="e">HOME</a></li>
+	<li>RESERVATION</li>
+  </ul>
+
+
+<section class = "banner">
+<img src="images/moon.png" alt="moon" id="icon" style="display:none">
+<div class = "card-content">
+
+ <h3> Booking a Table</h3>
+ 
+ <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+
+ 
+
+                   					 
+ <div class = "form-row">
+  <div class = "containing">
+
+
+	<div>
+		<label for = "fname">Name</label>
+		<input id= "fname" name="fname" type="text" placeholder="lena9" required>
+	</div>
+
+					
+					<div>
+						<label for = "number">Phone Number</label>
+						<input id= "number" name="number" type="tel" placeholder="05XXXXXXXX" required>
+					</div>
+
+					<div>
+						<label for = "quantity">Number Of People</label>
+						<input id = "quantity" name = "quantity" type = "number" placeholder="How Many People?" required> 
+					</div>
+
+</div>
+ </div>
+</form>
+                    
+</div>
+           
+ </section>
+
+ <section class = "tables">
+		
+	<div class = "table">
+	<h4>Table 1</h4>
+	<div><img src = "images/table1_1.jpg" alt="" onclick="validateForm( 2, 1);"></div>
+	
+		<img class="image2" src = "images/table1.png" alt="Location: upper left corner" style ="width: 110px; height: 40px;">
+		
+		<h6>Capacity: 2</h6>
+		<h6>Location: inside</h6>
+			<h6 id = "ava">Not Available</h6>
+
+	</div>
+
+
+	<div class = "table">
+		<h4>Table 2</h4>
+		<div> 
+		  <img src = "images/table2_2.jpg" alt="" onclick="validateForm( 4, 2);"> 
+	    </div>
+		
+		<img src = "images/table2.png" alt="Location: upper middle" style ="width: 110px; height: 40px;">
+		
+		<h6>Capacity: 4</h6>
+		<h6>Location: inside</h6>
+	   <h6 id = "ava1">Available</h6>
+			
+		
+	</div>
+	
+	<div class = "table">
+		<h4>Table 3</h4>
+		<div><img src = "images/table3_3.jpg" alt="" onclick="validateForm( 2, 3);"></div>
+		
+		<img src = "images/table3.png" alt="Location: upper right corner" style ="width: 110px; height: 40px;">
+		
+		<h6>Capacity: 2</h6>
+		<h6>Location: inside</h6>
+		<h6 id = "ava2">Available</h6>
+			
+		
+	</div>	
+	
+	
+	<div class = "table">
+	<h4>Table 4</h4>
+	<div><img src = "images/table4_4.jpg" alt="" onclick="validateForm( 3, 4);"></div>
+
+		<img src = "images/table4.png" alt="Location: Lower left corner" style ="width: 110px; height: 40px;">
+		
+		<h6>Capacity: 3</h6>
+		<h6>Location: inside</h6>
+			<h6 id = "ava3">Available</h6>
+			
+		
+	</div>
+
+
+	<div class = "table">
+		<h4>Table 5</h4>
+	<div><img src = "images/table5_5.jpg" alt="" onclick="validateForm( 4, 5);"></div>
+	
+		<img src = "images/table5.png" alt="Location: lower middle" style ="width: 110px; height: 40px;">
+		
+		<h6>Capacity: 4</h6>
+		<h6>Location: inside</h6>
+		<h6 id = "ava4">Not Available</h6>
+		
+	</div>
+	
+	<div class = "table">
+		<h4>Table 6</h4>
+	 <div><img src = "images/table6_6.jpg" alt="" onclick="validateForm( 6, 6);"></div>
+
+		<img src = "images/table6.png" alt="Location: lower right corner" style ="width: 110px; height: 40px;">
+		
+		<h6>Capacity: 6</h6>
+		<h6>Location: inside</h6>
+		<h6 id = "ava5">Available</h6>
+		
+	</div>
+
+</section>
+
+<section>
+	
+	<button class = "btn"  id ="bruh">Reserve</button>  
+ 
+</section>
+
+
+
+
+
+<footer>
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>E-foods</h3>
+            <a href="aboutus.html" accesskey="a">About Us</a> <!-- link !-->
+        </div>
+
+        <div class="box">
+            <h3>Customer support</h3>
+            <a href="contactus.html" accesskey="c">Contact Us</a> <!-- link !-->
+
+        </div>
+
+
+    </div>
+
+    <div class="credit"> 2021 E-FOODS. ALL RIGHT RESERVED</div>
+
+</section>
+</footer>
+
+
+<script>
+
+	//var nA = ["images/table1_1.jpg", "images/table5_5.jpg", "images/table6_6.jpg"]; 
+
+
+	var b = document.getElementById("ava").textContent;
+	var b1 = document.getElementById("ava1").textContent;
+	var b2 = document.getElementById("ava2").textContent;
+	var b3 = document.getElementById("ava3").textContent;
+	let b4 = document.getElementById("ava4").textContent;
+	var b5 = document.getElementById("ava5").textContent;
+	var bAarray = [b, b1, b2, b3, b4, b5]; 
+	
+	var a = document.getElementById("ava");
+	var a1 = document.getElementById("ava1");
+	var a2 = document.getElementById("ava2");
+	var a3 = document.getElementById("ava3");
+	let a4 = document.getElementById("ava4");
+	var a5 = document.getElementById("ava5");
+	var aAarray = [a, a1, a2, a3, a4, a5]; 
+
+    var bR = document.getElementById("bruh");
+
+
+
+
+function validateForm(capacity, tableNum) {
+
+	//------------------------------------valditon--------------------------------
+
+    let x = document.forms["myForm"]["fname"].value;
+	let y = document.forms["myForm"]["number"].value;
+	let z = document.forms["myForm"]["quantity"].value;
+    let s = x.substring(0,1);
+	let n = y.substring(0,2);
+	var num = tableNum - 1;
+	
+
+	if(x=="" || y=="" || z==""){
+	   alert("You Must Full Out all Lables");
+      return false;
+	}
+
+	if(!isNaN(s)){
+		alert("name must start with a letter");
+      return false;
+	}
+
+	if(isNaN(y)){
+		alert("Only digits are allowed in phone number");
+      return false;
+	}
+
+	if(y.length<10 || y.length>10){
+		alert("enter a valid phone number");
+      return false;
+	}
+	
+	if(n !== "05"){
+		alert("number must starts with 05");
+      return false;
+	}
+
+	if(z>8 || z<1){
+	   alert("Number Of People must be greater than zero and less than eight");
+      return false;
+	}
+
+	//------------------------------------Availability--------------------------------
+
+/* 	for(var i =0; i<nA.length; i++){
+		 if(table.src.match(nA[i])){
+			 alert("Not Available Chose another table");
+			 alert("---Information---\n" + "Name: " + x + "\nPhone Number: " + y + "\nNumber Of People: " + z);
+			 return false;
+		} */
+
+		if(bAarray[num] == "Not Available"){
+			alert("Not Available Chose another table");
+			 alert("---Information---\n" + "Name: " + x + "\nPhone Number: " + y + "\nNumber Of People: " + z);
+			 return false;
+		}
+
+	
+	
+
+//------------------------------------capacity--------------------------------
+
+ if(z>capacity ){
+			alert("the table capacity does not suit you.\n you need to get a table suit for "+ z + " people or more"); 
+			return false;
+		} 
+		
+		//------------------------------------color--------------------------------
+
+		 else{
+			 var num = tableNum - 1;
+			document.getElementsByClassName("table")[num].style.backgroundColor = "lightyellow";
+			var customerInfo = [x, y, z];
+		
+		}
+
+			//var customerInfo = [x, y, z]; //can not fund var consol
+			/* var myFormData = [];   
+            var value1 = document.forms["myForm"]["fname"].value;
+			myFormData.push(value1);  
+			var value2 = document.forms["myForm"]["number"].value;
+			myFormData.push(value2);
+			var value3 = document.forms["myForm"]["quantity"].value;
+			myFormData.push(value3); */
+
+		
+
+
+
+bR.onclick = function (){
+	
+	alert("your reservation has been confirmed");
+
+
+localStorage.setItem("notAva", aAarray[num].innerHTML = ("Not Available"));
+
+window.location.href = 'order.html'
+
+				
+				
+			
+		}
+
+		const previousTables = localStorage.getItem('tableNumber')
+
+			if(previousTables){
+				if(!previousTables.split(',').includes(`${tableNum}`)){
+					localStorage.setItem('tableNumber',previousTables+","+tableNum)
+				}
+				 
+			}else{
+				localStorage.setItem("tableNumber", tableNum);
+			}
+
+
+
+	}
+
+
+
+  </script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>

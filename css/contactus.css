@@ -1,0 +1,52 @@
+ 
+:root{
+	
+    --gray:#5A5A5A;
+	--yellow:#F1C40F;
+	--orange:#D68910;
+	--light-gray:#eee;
+	--white:#FFFFFF;
+	--footer:#EEEEEE; 
+	--text-shadow:.2em  .2em .3em silver;
+	--card:#EEEEEE ;
+	--box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+	
+}
+
+ .contactus .row{
+   display: flex;
+   align-items: center;}
+
+.contactus .row .content{
+   flex: 1rem;}
+
+ .contactus .row .content h3{
+   color:var(--orange);
+   font-size: 6rem;
+   padding:.5rem 0;}
+
+ .contactus .row .content p{
+   color:var(--gray);
+   font-size: 1.5rem;
+   padding:.5rem 0;}
+
+ .contactus .row .content .icons-container{
+    display: flex;
+    padding:0.1rem 0;
+    margin-top: 3rem;}
+
+ .contactus .row .content .icons-container .icons{
+    flex:1 1 15rem;
+    padding:0.5rem 0rem;}
+
+ .contactus .row .content .icons-container .icons i{
+    font-size: 5rem;
+    color:var(--orange);}
+	
+.image img{
+ width:100%;
+ max-width: 540px;
+ height: 100%;
+ max-height:300px;
+ 
+}

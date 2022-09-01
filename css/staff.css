@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+
+
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Nunito', sans-serif;
+}
+
+
+
+/* staff page css starts */
+
+.Team h3 {
+	text-align:center;
+	text-shadow:var(--text-shadow);
+	font-weight: bold;
+    font-size: 7rem;
+    color:var(--orange);
+}
+
+.container
+{
+	display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+
+}
+.container .card
+{
+
+   width: 200px;
+   height:300px;
+   padding: 30px 50px;
+   margin: 20px;
+   background:var(--card);
+   box-shadow: var(--box-shadow);
+   border-radius: 20px;
+
+
+}
+.container .card .content
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container .card .content .Employee_image
+{
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   position: relative;
+   margin-bottom: 20px;
+   overflow: hidden;
+}
+.container .card .content .Employee_image img
+{
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.container .card .content .info h4
+{
+   color: var(--gray);
+   font-size: 1.7rem;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.container .card .content .info h5
+{
+   color: var(--gray);
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-align: center;
+}
+
+.container .card .content .info h6
+{
+   color: var(--gray);
+   font-size: 1.2rem;
+   font-weight: normal;
+   text-align: justify;
+   text-align: center;
+}
+
+.button{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.3rem;
+    color:var(--white);
+    background: var(--yellow); /****/
+    border-radius: 5rem; 
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.button:hover{
+    letter-spacing: .1rem;
+    color:var(--yellow);
+    background: var(--white);
+}
+
+
+/* staff page css Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* staff info page css Starts */
+
+.container2
+{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+	gap:1.5rem;
+	
+	
+}
+
+/* Empolyee card info Starts */
+.container2 .card
+{	
+   width:auto;
+   height:auto;
+   padding: 30px 50px;
+   margin: 20px;
+   background: var(--card);
+   box-shadow: var(--box-shadow);
+   border-radius: 20px;
+   flex:1 1 45rem;
+
+}
+.container2 .card .content
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container2 .card .content .Employee_image
+{
+   width: 300px;
+   height: 200px;
+   border-radius: 10%;
+   position: relative;
+   margin-bottom: 20px;
+   overflow: hidden;
+}
+.container2 .card .content .Employee_image img
+{
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+.container2 .card  h1{
+	text-align:center;
+	text-shadow: var(--text-shadow);
+	font-weight: bold;
+    font-size: 4rem;
+    color: var(--orange);
+	
+}
+
+
+.container2 .card .content .info h3{
+	text-align:center;
+	text-shadow: var(--text-shadow);
+	font-weight: bold;
+    font-size: 2rem;
+    color:var(--gray);
+}
+
+.container2 .card .content .info h5{
+	text-align:center;
+	font-weight: normal;
+    font-size: 1.5rem;
+    color: var(--gray);
+	text-align:justify;
+}
+
+.container2 .card .content .info h4{
+	text-align:center;
+	font-weight: bold;
+    font-size: 1.5rem;
+    color:var(--gray);
+	text-align:justify;
+}
+/* Empolyee card info Ends */
+
+
+
+/* Empolyee Evalution starts*/
+
+
+.container2 .Evalution.stars{
+	align-items:center;
+	justify-content:center;
+	
+}
+
+
+.container2 .Evalution h4{
+	text-align:left;
+	font-weight: bold;
+    font-size: 1.5rem;
+    color:var(--gray);
+	justify-content:center;
+	
+}
+
+
+legend{
+	color:var(--gray);
+	font-size: 3rem;
+}
+form{
+	display:flex;
+	height:100%;
+	width:100%;
+}
+
+fieldset{
+	padding:3rem;
+}
+
+
+
+#star{
+        width:400px;
+       
+    }
+#star h1{
+text-align:left;
+color:var(--gray);
+font-size:2rem;
+}
+.y{
+        padding:0px;
+        margin: 0px;
+    }
+.x{
+        display:inline-block;
+        font-size:30px;
+        padding:10px;
+        color:#ccc;
+    }
+.hoverd, .clicked {
+    color: var(--yellow);
+}
+
+
+#message{
+ text-align:center;
+ color:var(--gray);
+ font-size: 1.5rem;
+}
+
+
+
+
+ 
+ /* Empolyee Evalution Ends*/
+
+ @media(max-width:1200px){
+	 .card{
+		 width:40%
+	 }
+}
+
+ @media(max-width:600px){
+	 .card{
+		 width:40%
+		 }
+ }

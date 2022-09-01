@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--we dont know what is this!-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>E-foods</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/stylemenu.css" />
+    <!-- custom js file link -->
+    <script src="js/table.js"></script>
+</head>
+
+<body>
+    <!-- header section starts      -->
+    
+    <header>
+        <a href="index.html" class="logo"><i class="fas fa-hamburger"></i>e-foods</a>
+
+        <nav class="navbar">
+            <a href="index.html" accesskey="h">HOME</a>
+            <a href="staff.html" accesskey="s">STAFF</a>
+            <a class="active" href="reservation.html" accesskey="r">RESERVATION</a>
+            <a href="order.html" accesskey="o">ORDER</a>
+            <a href="menu.html" accesskey="m">MENU</a>
+        </nav>
+		<i class ="fas fa-bars" id="menu-bars"></i>
+    </header>
+    
+    <!-- header section ends-->
+    
+    <ul class="breadcrumb">
+        <li><a href="index.html">HOME</a></li>
+        <li>Order</li>
+    </ul>
+
+    <!-- do your page here -->
+   
+
+    <div>
+        <section class="menu" id="menu">
+		<img src="images/moon.png" alt="moon" id="icon" style="display:none">
+            <h2>
+                Table number:
+                <select id="drop" name="table number" onchange="changeProducts(this.value)">
+                </select>
+            </h2>
+            <br />
+            <h1 id="course1">Appetizers</h1>
+
+            <div class="box-container" id='appetizers'>
+                <!-- <div class="box">
+                    <div class="image">
+                        <img src="images/frenchfries.png" alt="French Fries Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>french fries</h3>
+
+                        <p>a Fresh Crispy french fries with ketchup and mayonnaise.</p>
+                        <p>10 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+
+                        <br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/greensalad.png" alt="Green Salad Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Green Salad</h3>
+
+                        <p>
+                            A Fresh classic Green Salad Consist Of lettuce, sliced apple,
+                            tomato and pomegranate pieces above it.
+                        </p>
+                        <p>12 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/soup.png" alt="Soup Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Soup</h3>
+
+                        <p>a Warm lentil soup with croutons, lemon and rosemary.</p>
+                        <p>9 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/onionsrings.png" alt="Onions Rings Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Onions Rings</h3>
+
+                        <p>A Fresh Crispy onions rings With Ketchup. 7 SAR</p>
+                        <p>7 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+            <br /><br />
+            <h1 id="course2">Main course</h1>
+
+            <div class="box-container" id='maincourse'>
+                <!-- <div class="box">
+                    <div class="image">
+                        <img src="images/cheeseburger.png" alt="Cheeseburger Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Cheese Burger</h3>
+
+                        <p>
+                            classic cheeseburger begins with a 100% pure beef burger
+                            seasoned with just a pinch of salt and pepper and a slice of
+                            tomato and lettuce.
+                        </p>
+                        <p>20 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/pizza.png" alt="Pizza Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Pizza</h3>
+
+                        <p>
+                            classic Delicious Pepperoni Pizza with fresh mozzarella and
+                            parmesan cheese, Italian tomato sauce.
+                        </p>
+                        <p>24 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br /><br />
+                        <br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/rice.png" alt="Rice Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>rice</h3>
+
+                        <p>Traditional Japanese rice with original Japanese spices.</p>
+                        <p>10 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br /><br /><br /><br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/pasta.png" alt="Pasta Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>pasta</h3>
+
+                        <p>
+                            Traditional tasty Italian pasta with original Italian spices,
+                            fresh parmesan cheese and chicken.
+                        </p>
+                        <p>20 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/sushi.png" alt="Sushi Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Sushi</h3>
+
+                        <p>a Japanese fresh Sushi with soya and wasabi sauce.</p>
+                        <p>37 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/steak.png" alt="Steak Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>steak</h3>
+
+                        <p>a 100% pure beef meat grilled with a pure cow butter.</p>
+                        <p>46 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+            <br /><br />
+            <h1 id="course3">Desserts and drinks</h1>
+            <div class="box-container" id='dessertsanddrinks'>
+                <!-- <div class="box">
+                    <div class="image">
+                        <img src="images/Souffle.png" alt="Souffle Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>Souffle</h3>
+
+                        <p>a classic french chocolate Souffle.</p>
+                        <p>13 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br /><br /><br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/chocolatecake.png" alt="Cake Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>cake</h3>
+
+                        <p>classic chocolate cake with chocolate sauce and Strawberry.</p>
+                        <p>15 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+
+                        <br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/mousse.png" alt="Mousse Dish" />
+                    </div>
+
+                    <div class="content">
+                        <h3>mousse</h3>
+
+                        <p>
+                            french chocolate mousse with a white cream above it and
+                            blueberries.
+                        </p>
+                        <p>15 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/coffee.png" alt="coffee drink" />
+                    </div>
+
+                    <div class="content">
+                        <h3>coffee</h3>
+
+                        <p>hot black coffee.</p>
+                        <p>6 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br /><br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/orangejuice.png" alt="Orange Juice" />
+                    </div>
+
+                    <div class="content">
+                        <h3>orange juice</h3>
+
+                        <p>Fresh sugar free orange juice.</p>
+                        <p>12 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br />
+
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/softdrinks.png" alt="soft drinks" />
+                    </div>
+
+                    <div class="content">
+                        <h3>soft drinks</h3>
+
+                        <p>Coca-Cola, Diet Coke, Sprite, fanta, 7up.</p>
+                        <p>7 SAR</p>
+                        <input type="number" class="quantity" name="quantity" min="1" placeholder="1" />
+                        <br />
+                        <button class="btn" type="button" onclick="alert('Successfully added to cart.'); add();">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+            <br /><br /><br />
+            <div class="wrapper">
+                <button class="btn" type="button" id="order" onclick="handleOrder()">
+                    Order
+                </button>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <div id='orderLists'>
+
+            </div>
+            <!-- <table id="myTable">
+                <caption>
+                    Order list
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Table number</th>
+                        <th>Order</th>
+                        <th id="price">Price</th>
+                        <th>Quantity</th>
+                        <th>Print invoice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table #2</td>
+                        <td>
+                            Green salad <br />
+                            Pasta <br />
+                            Coffee
+                        </td>
+                        <td>
+                            12 <br />
+                            20 <br />
+                            6
+                        </td>
+                        <td>
+                            1 <br />
+                            1 <br />
+                            1<br />
+                        </td>
+                        <td>
+                            <div class="wrapper">
+                                <button class="btn" type="button" onclick="handlePrint()">
+                                    Print
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Table #4</td>
+                        <td>
+                            Cheese burger <br />
+                            Onion rings <br />
+                            Souffle
+                        </td>
+                        <td>
+                            20 <br />
+                            7 <br />
+                            13
+                        </td>
+                        <td>
+                            1 <br />
+                            1 <br />
+                            1
+                        </td>
+                        <td>
+                            <div class="wrapper">
+                                <button class="btn" type="button" onclick="alert('Printing invoice...')">
+                                    Print
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table> -->
+
+            <br />
+            <h3>Click the button to sort the table in ascending order:</h3>
+            <br />
+
+            <table id="tt1">
+                <caption>
+                    Appetizers
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>French fries</td>
+                        <td>10</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Green salad</td>
+                        <td>12</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Soup</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Onion rings</td>
+                        <td>7</td>
+                        <td>1</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br />
+            <button class="btn" type="button" onclick="sortTable1()">Sort</button>
+            <br />
+
+            <table id="tt2">
+                <caption>
+                    Main course
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cheese burger</td>
+                        <td>20</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Pizza</td>
+                        <td>24</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Rice</td>
+                        <td>10</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Pasta</td>
+                        <td>20</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Sushi</td>
+                        <td>37</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Steak</td>
+                        <td>46</td>
+                        <td>1</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br />
+            <button class="btn" onclick="sortTable2()">Sort</button>
+            <br />
+            <table id="tt3">
+                <caption>
+                    Desserts and drinks
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Souffle</td>
+                        <td>13</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Cake</td>
+                        <td>15</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Mousse</td>
+                        <td>15</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Coffee</td>
+                        <td>6</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Orange juice</td>
+                        <td>12</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Soft drinks</td>
+                        <td>7</td>
+                        <td>1</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br />
+            <button class="btn" onclick="sortTable3()">Sort</button>
+        </section>
+    </div>
+
+    <!-- footer section starts  -->
+    <footer>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>E-foods</h3>
+                    <a href="aboutus.html" accesskey="a">About Us</a>
+                    <!-- link !-->
+                </div>
+
+                <div class="box">
+                    <h3>Customer support</h3>
+                    <a href="contactus.html" accesskey="c">Contact Us</a>
+                    <!-- link !-->
+                </div>
+            </div>
+
+            <div class="credit">2021 E-FOODS. ALL RIGHT RESERVED</div>
+        </section>
+    </footer>
+    <script src='js/main.js'></script>
+	
+    <script>
+        const isTableBooked = localStorage.getItem('tableNumber')
+        if(isTableBooked){
+            
+            let tableSelect = document.getElementById('drop')
+            let tables = isTableBooked.split(',');
+            changeProducts(`table #${tables[0]}`)
+            tables.map(table => tableSelect.innerHTML += `<option value="table #${table}">Table #${table}</option>`)
+        }else{
+            alert('You have add atleast one table ,before accessing order page!')
+            window.location.href= 'reservation.html'
+        }
+
+        function sortTable1() {
+            var table, rows, switching, i, x, y, shouldSwitch;
+
+            table = document.getElementById("tt1");
+            switching = true;
+            /* Make a loop that will continue until
+            no switching has been done: */
+            while (switching) {
+                // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /* Loop through all table rows (except the
+                first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                    // Start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /* Get the two elements you want to compare,
+                    one from current row and one from the next: */
+                    x = rows[i].getElementsByTagName("td")[1];
+                    y = rows[i + 1].getElementsByTagName("td")[1];
+                    // Check if the two rows should switch place:
+                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    /* If a switch has been marked, make the switch
+                    and mark that a switch has been done: */
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+
+        function sortTable2() {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("tt2");
+            switching = true;
+            /* Make a loop that will continue until
+            no switching has been done: */
+            while (switching) {
+                // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /* Loop through all table rows (except the
+                first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                    // Start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /* Get the two elements you want to compare,
+                    one from current row and one from the next: */
+                    x = rows[i].getElementsByTagName("TD")[1];
+                    y = rows[i + 1].getElementsByTagName("TD")[1];
+                    // Check if the two rows should switch place:
+                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    /* If a switch has been marked, make the switch
+                    and mark that a switch has been done: */
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+
+        function sortTable3() {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("tt3");
+            switching = true;
+            /* Make a loop that will continue until
+            no switching has been done: */
+            while (switching) {
+                // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /* Loop through all table rows (except the
+                first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                    // Start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /* Get the two elements you want to compare,
+                    one from current row and one from the next: */
+                    x = rows[i].getElementsByTagName("TD")[1];
+                    y = rows[i + 1].getElementsByTagName("TD")[1];
+                    // Check if the two rows should switch place:
+                    if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    /* If a switch has been marked, make the switch
+                    and mark that a switch has been done: */
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+        
+        function add() {
+
+            var str;
+            var str2;
+            var str3;
+            var str4;
+
+
+            var g = document.getElementsByClassName("content");
+            var a;
+
+
+            const f = document.getElementsByClassName("content");
+
+
+            for (var i = 0; i < f.length; i++) {
+                a = g.getElementsByClassName("btn")[i];
+                if (a.onclick == true) {
+
+
+                    var e = document.getElementById("drop");
+                    str = e.options[e.selectedIndex].text;
+
+
+
+                    str2 += f[i].getElementByTagName('h3') + " " + "\n";
+
+
+                    str3 += f[i].p[1] + " " + "\n";
+
+
+                    str4 += f[i].getElementsByClassName("quantity")[i].value + " " + "\n";
+
+                    if (document.getElementById("order").onclick == true) {
+                        function add() {
+                            var row = table.insertRow(i);
+                            var cell1 = row.insertCell(0);
+                            var cell2 = row.insertCell(1);
+                            var cell3 = row.insertCell(2);
+                            var cell4 = row.insertCell(3);
+                            var cell5 = row.insertCell(4);
+
+                            var btn = document.createElement('input');
+                            btn.type = "button";
+                            btn.className = "btn";
+                            btn.onclick = alert('printing invoice...');
+
+                            cell1.innerHTML = str;
+                            cell2.innerHTML = str2;
+                            cell3.innerHTML = str3;
+                            cell4.innerHTML = str4;
+                            cell5.innerHTML = td.appendChild(btn);
+
+
+                            var price = str3;
+                            var words = price.split(" ");
+                            for (var i = 0; i < words.length - 1; i++){
+                                words[i] += " ";
+                                
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    </script>
+	<script src="js/home.js"></script>
+</body>
+
+</html>

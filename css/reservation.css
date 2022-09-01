@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+
+:root{
+	
+    --gray:#5A5A5A;
+	--yellow:#F1C40F;
+	--orange:#D68910;
+	--light-gray:#eee;
+	--white:#FFFFFF;
+	--footer:#EEEEEE; 
+	--text-shadow:.2em  .2em .3em silver;
+	--card:#EEEEEE ;
+	--box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+	
+}
+
+
+.banner{
+    display: flex;
+    justify-content: center; 
+}
+
+
+
+.card-content{
+    height: 400px;
+	width:700px;
+	background:  #f2f3f7;
+	border-radius: 20px;
+	box-shadow: 0.6em 0.6em 1.2em #d2dce9,-0.5em -0.5em 1em #ffffff;
+	
+}
+.card-content h3{
+    text-align: center;
+    color: var(--orange);
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+	flex-wrap: wrap;
+    width: auto;
+    margin:auto;
+}
+
+ form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder{
+    color: 	#D3D3D3;
+}
+.containing {
+	color:var(--orange);
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	padding: 20px;
+}
+
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img{
+        height: 330px;
+    }
+}
+
+
+.tables{
+	display: flex;	
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap:1.5rem;
+}
+
+.table{
+	
+   width:auto;
+   height:auto;
+   
+   background:White;
+   border-radius: 20px;
+   margin:10px;
+   padding:20px;
+   box-shadow: 0.6em 0.6em 1.2em #d2dce9,-0.5em -0.5em 1em #ffffff;
+   
+}
+
+.tables .btn { text-align: center; 
+margin-top: 10px;
+vertical-align: middle;
+
+ }
+
+
+.table img{
+width: 250px;
+height: 180px;
+object-fit: cover;
+cursor: pointer;
+transition: 0.2s ease;	
+border-radius:1rem;
+margin:1rem;
+}
+
+
+/*.table .image2 img{
+	
+width: 110px;
+height: 40px;
+object-fit: cover;
+cursor: pointer;
+transition: 0.2s ease;	
+	
+}*/
+
+
+
+.table img:hover{
+	
+	transform: scale(1.0);
+}
+
+.table h4{
+	
+	padding: 5px;
+	text-align: center;   
+	
+}
+
+
+
+button{
+	text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.3rem;
+    color:white;
+    background: #F1C40F; /****/
+    border-radius: 5rem; 
+    cursor: pointer;
+    padding:.8rem 3rem;
+	
+}
+
+button:hover{
+    letter-spacing: .1rem;
+    color:#F1C40F;
+    background: white;
+}
+
+.table h4{
+
+	text-align:center;
+	text-shadow: .2em .2em .3em silver;
+	font-weight: bold;
+    font-size: 2rem;
+    color:#5A5A5A;
+}
+
+.table h6{
+	text-align:center;
+	font-weight: normal;
+    font-size: 1.5rem;
+    color:black;
+	
+}
+
+
+@media screen and (max-width: 1000px){
+	
+	tables{
+		
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+
+@media screen and (max-width: 768px){
+	
+	tables{
+		
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+

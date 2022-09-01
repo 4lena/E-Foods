@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+	
+    --gray:#5A5A5A;
+	--yellow:#F1C40F;
+	--orange:#D68910;
+	--light-gray:#eee;
+	--white:#FFFFFF;
+	--footer:#EEEEEE; 
+	--text-shadow:.2em  .2em .3em silver;
+	--card:#EEEEEE ;
+	--box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+	
+}
+
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+body{
+	margin-top:49px;
+	text-align: center;
+	background:var(--white);	}
+
+
+header{
+    position:absolute;
+    top:0; left: 0; right:0;
+    background: var(--white);
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow:var(--box-shadow);
+	
+}
+
+section{
+    padding:2rem 9%;
+	
+}
+
+
+
+/*logo design*/
+header .logo{
+    color:var(--gray);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+
+/* the color of the icon */
+header .logo i{
+    color:var(--orange)
+}
+
+
+/*the pages in the nav bar */
+header .navbar a{
+	
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color:var(--gray);
+	flex-wrap: wrap;
+}
+
+/*when i hover on a page on the nav bar it will make the */
+header .navbar a.active,
+header .navbar a:hover{
+    color:var(--white);
+    background: var(--yellow);
+}
+
+header #menu-bars{
+    display: none;
+		cursor: pointer;
+	margin-left:.5rem;
+	height:4.5 rem;
+	line-height: 4.5rem;
+	width: 4.5rem;
+	text-align: center;
+	font-size: 1.7rem;
+	color:var(--gray);
+	border-radius: 50%;
+	background:var(--light-gray);
+}
+
+
+header .icons i:hover{
+    color:var(--white);
+    background: var(--yellow);d: 
+}
+
+.dark-theme{
+	--gray:#eee;
+	--yellow:#F1C40F;
+	--orange:#D68910;
+	--light-gray:#212121;
+	--white:#404040;
+	--footer:#212121;
+    --box-shadow:;
+	--text-shadow:;
+	--card:#7D7D7D;
+}
+
+
+
+.home{
+    gap:2rem; 
+    
+}
+
+
+
+
+footer{
+	bottom:0;
+	right:0;
+	left:0;
+	position:relative;
+	background-color:var(--footer);
+	box-shadow:var(--box-shadow);
+}
+
+.footer{
+	
+	padding-top: 5rem;
+	
+}
+
+.footer .box-container{
+	
+	
+	text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+	
+}
+
+.footer .box-container .box h3{
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+
+.footer .box-container .box a{
+    display: block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+
+.footer .box-container .box a:hover{
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 2rem;
+    color:var(--orange);
+    padding:.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+
+
+ul.breadcrumb {
+
+  text-align:center;
+  padding: 10px 16px;
+  padding-left:90px;
+  list-style: none;
+  background-color:var(--light-gray);
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  color: var(--gray);
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color:var(--gray);
+  content: ">";
+}
+ul.breadcrumb li a {
+  color: var(--gray);
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+
+
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:var(--white);
+    background: var(--yellow);
+    border-radius: .5rem; 
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.btn:hover{
+    letter-spacing: .1rem;
+    color:var(--yellow);
+    background: white;
+} 
+
+
+ .homepage h1{
+  color:var(--orange);
+  font-size: 6rem;
+  text-shadow:var(--text-shadow);
+  padding: 15px;
+ }
+  
+ section:nth-child(even){ 
+    background:var(--light-gray);
+	
+ }
+
+
+    
+ .homepage .row{
+   display: flex;
+   align-items: center;
+ }
+
+ .homepage .row .content{
+   flex: 1rem;
+ }
+
+ .homepage .row .content p{
+   color: var(--gray);
+   font-size: 2rem;
+   margin-left: 20px;
+   text-align: center;
+ }
+   
+ .homepage img{
+ width:100%;
+ max-width: 540px;
+ height: 100%;
+ max-height:300px;
+ 
+ }
+
+
+.ncontent{
+	display:relative;
+	align-items:center;
+}
+
+ .ncontent h3{
+	 
+  color:var(--orange);
+  font-size: 6rem;
+  text-shadow: var(--text-shadow);
+  padding: 15px;
+  display:inline-block;
+}
+
+.ncontent img{
+	width: 30px;
+	cursor:pointer;
+	float: right;
+	margin-right:10px;
+	margin-top:10px;
+
+}
+
+  
+iframe{
+ width:100%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding:1rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+
+}
+
+
+
+
+
+
+@media (max-width:768px){
+
+    header #menu-bars{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: var(--white);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+
+    header .navbar a{
+        display: block;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:var(--light-gray);
+    }
+
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+

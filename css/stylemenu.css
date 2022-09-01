@@ -1,0 +1,198 @@
+ :root{
+	
+    --gray:#5A5A5A;
+	--yellow:#F1C40F;
+	--orange:#D68910;
+	--light-gray:#eee;
+	--white:#FFFFFF;
+	--footer:#EEEEEE; 
+	--text-shadow:.2em  .2em .3em silver;
+	--card:#EEEEEE ;
+	--box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+	
+}
+
+ 
+ 
+ .menu .box-container{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+    gap:5rem;
+	
+
+}
+
+
+
+.menu .box-container .box{
+
+    background:var(--white);
+
+    border:.1rem solid rgba(0,0,0,.2);
+
+    border-radius: .5rem;
+	
+	border-color: var(--gray);
+	
+
+}
+
+
+
+.menu .box-container .box .image{
+
+    height: 25rem;
+
+    width: 100%;
+
+    padding:1.5rem;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+
+.menu .box-container .box .image img{
+
+    height: 100%;
+
+    width: 100%;
+
+    border-radius: .5rem;
+
+    object-fit: cover;
+
+}
+
+
+
+.menu .box-container .box .content{
+
+    padding:5rem;  
+
+    padding-top: 0;
+
+}
+
+
+
+.menu .box-container .box .content h3{
+
+    color:var(--yellow);
+
+    font-size: 2.5rem;
+	
+
+}
+
+
+
+.menu .box-container .box .content p{
+
+    color:var(--gray);
+
+    font-size: 1.6rem;
+
+    padding:.5rem 0;
+
+    line-height: 1.5;
+
+}
+
+h1 {
+   font-size: 300%; 
+   padding: 15px;
+   color: var(--gray);
+}
+
+.btn{
+    margin-top: 4rem;
+    display: block;
+    font-size: 1.7rem;
+    color:white;
+    background: var(--yellow); /****/
+    border-radius: .5rem; 
+    cursor: pointer;
+    padding:.8rem 3rem;
+position: relative;
+margin: auto;
+
+}
+input[type=number]{
+  border: 2px solid black;
+  height: 30px;
+  width: 100px;
+}
+.btn:hover{
+    letter-spacing: .1rem;
+    color:var(--yellow);
+    background: white;
+}
+
+
+.menu .box-container .box .content .btn{
+
+text-align: center; 
+margin-top: 10px;
+vertical-align: middle;
+ padding:16px;
+
+}
+
+ .contain {
+        position: relative;
+    }
+    .contain img {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+    }
+
+
+
+h2{
+            text-align: justify;
+            font-size: 30px;
+			color: var(--gray);
+        }
+		
+h3{
+            text-align: center;
+            font-size: 20px;
+			color: var(--gray);
+        }
+	
+option {
+	font-size: 25px;
+}
+table, th, td {
+  border: 1px solid black;
+    border-collapse: collapse;
+	    border-style: solid;
+  border-color: var(--yellow);
+  text-align:center;
+  font-size: 18px;
+  color: var(--gray);
+  
+}
+table {
+  width: 100%;
+  height: 100%;
+    border-style: solid;
+  border-color:var(--yellow);
+  text-align:center;
+}
+caption{
+            font-size: 30px;
+			font-weight: bold;
+			color: var(--gray);
+}
+.wrapper {
+		text-align: center;
+}
