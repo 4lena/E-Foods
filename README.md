@@ -14,6 +14,9 @@
 
 E-foods is a web-based restaurant management system that allows the restaurant manager to efficiently manage his operations. The system includes features such as staff rating, table booking, menu viewing, and ordering meals for customers. With E-foods, the restaurant manager can easily keep track of their staff's performance, streamline the booking process for customers, and manage orders.
 
+## Website link
+https://itt427.github.io/E-Foods/index.html
+
 <!-- technology -->
 ## Built With
 
